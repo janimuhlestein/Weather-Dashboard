@@ -10,10 +10,6 @@ body {
     padding-bottom: 10px;
 }
 
-.col-group {
-    border: 1px solid black;
-    height: 700px;
-}
 
 
 .btn {
@@ -80,11 +76,11 @@ body {
     font-size: 30px;
     width: 100%;
     text-align: center;
-};
+}
 
 .details {
     font-size: 15px;
-    margin: 10px;
+    padding-left: 10px;
 }
 
 .uv-high {
@@ -95,10 +91,11 @@ body {
 }
 
 .uv-moderate {
-    background-color: yellow;
+    background-color: darkgoldenrod;
     color: white;
     padding: 2px;
     border-radius: 5px;
+    text-shadow: 1px 2xp 2xp darkslategrey;
 }
 
 .uv-favorable {
@@ -118,8 +115,4 @@ body {
 .top {
     margin-top: 10px;
     font-size: 18px;
-}
-
-.img {
-    width: 80%;
 }

@@ -36,6 +36,8 @@ var getCurrent = function(cityName) {
 
 
 $("#btnSubmit").on("click", function(){
+    //clear everything, if there's anything there
+    clearInfo();
     //get the city
     var cityName = $("#cityName").val().trim();
     //get current conditions
@@ -58,7 +60,7 @@ var displayCurrentDate = function(data) {
     var name = document.createElement("p");
     name.setAttribute("class", "cityName");
     var date = moment().format("MM/DD/YYYY");
-    name.innerHTML = data.name + " " + date + "<span><img src='" +iconPath + "'></img></span>";
+    name.innerHTML = data.name + " " + date + " " + "<span><img src='" +iconPath + "'></img></span>";
     //name.innerHTML = data.name;
     cityInfo.appendChild(name);
     var temp = document.createElement("p");
@@ -109,7 +111,7 @@ var loadCities = function() {
 };
 
 $("#btnClear").on("click", function(){
-weather.removeChild(weather.childNodes[2]);
+    clearInfo();
 
 });
 
@@ -221,6 +223,7 @@ var getSecondDay = function(data) {
         if(dtTime === dateList + " 12:00:00") {
         //get the iconList
         //var iconList = data.list[i].weather[0].icon;
+        console.log(data.list[i].weather[0].description);
         var iconPath = setForecastIcon(data,i);
         //var iconPath = "http://openweathermap.org/img/wn/" + iconList + "@2x.png"
         var icon = document.createElement("img");
@@ -372,10 +375,10 @@ var setCurrentIcon = function(data) {
    else if(time > 18 && description === "few clouds" || time > 18 && description ==="scattered clouds" ) {
        iconPath = cloudyMoonIcon;
    }
-   else if(description === "broken clouds") {
+   else if(description === "broken clouds" || description === "overcast clouds") {
        iconPath = mostlyCloudyIcon;
    }
-   else if(description === "shower rain"|| description === "rain") {
+   else if(description === "shower rain"|| description === "rain" || description === "light rain" || description === "moderate rain") {
        iconPath = rainIcon;
    }
    else if(description === "thunderstorm") {
@@ -396,10 +399,10 @@ var setForecastIcon = function(data, index) {
     else if(description === "few clouds" || description === "scattered clouds") {
         iconPath = partCloudIcon;
     }
-    else if(description === "broken clouds") {
+    else if(description === "broken clouds" || description === "overcast clouds") {
         iconPath = mostlyCloudyIcon;
     }
-    else if(description === "shower rain"|| description === "rain") {
+    else if(description === "shower rain"|| description === "rain" || description === "light rain" || description === "moderate rain") {
         iconPath = rainIcon;
     }
     else if(description === "thunderstorm") {
@@ -411,10 +414,26 @@ var setForecastIcon = function(data, index) {
     return iconPath;
 };
 
+var clearInfo = function() {
+    cityInfo.innerHTML = "";
+    var first = document.querySelector("#first-day");
+    first.innerHTML = "";
+    var second = document.querySelector("#second-day");
+    second.innerHTML = "";
+    var third  = document.querySelector("#third-day");
+    third.innerHTML = "";
+    var fourth = document.querySelector("#fourth-day");
+    fourth.innerHTML = "";
+    var fifth = document.querySelector("#fifth-day");
+    fifth.innerHTML = "";
+}
+
 loadCities();
 
 //if they click on one of the city names, load those
 $(".cityCard").on("click", function(){
+    //clear out previous results
+    clearInfo();
     var cityName = $(this).text().trim();
     console.log(cityName);
     //get current conditions
