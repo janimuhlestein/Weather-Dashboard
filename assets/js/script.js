@@ -96,7 +96,7 @@ var loadCities = function() {
    cities = JSON.parse(myStorage.getItem("cities"));
    //cities = JSON.parse(cities);
    console.log(cities);
-    if(cities.length === 0){
+    if(!cities){
         //if we have no cities in storage, don't worry about it
         return false;
     }
