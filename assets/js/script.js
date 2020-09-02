@@ -107,7 +107,8 @@ var loadCities = function() {
     for(var i = 0; i < cities.length; i++) {
 
         var cityName = document.createElement("p");
-        cityName.setAttribute("class", "cityCard");
+        cityName.setAttribute("class", "cityList");
+        cityName.setAttribute("id", "cityCard");
         cityName.textContent = cities[i];
         cityList.appendChild(cityName);
     }
@@ -434,7 +435,7 @@ var clearInfo = function() {
 loadCities();
 
 //if they click on one of the city names, load those
-$(".cityCard").on("click", function(){
+$("#cityCard").on("click", function(){
     //clear out previous results
     clearInfo();
     var cityName = $(this).text().trim();
