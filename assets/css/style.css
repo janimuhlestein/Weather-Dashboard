@@ -1,0 +1,117 @@
+body {
+    box-sizing: border-box;
+}
+
+.title {
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.col-group {
+    border: 1px solid black;
+    height: 700px;
+}
+
+
+.btn {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.weather {
+   font-size: 20px;
+   color: white;
+   background-color: blue;
+   border-radius: 15px;
+   padding: 15px;
+
+                    
+}
+
+.cityList {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+#btnClear {
+    width: 77.17px !important;
+}
+
+.forecast {
+    display: inline-flex;
+    width: 100%;
+}
+
+.city-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.day {
+    width: 24%;
+    height: 230px;
+    border: 1px solid black;
+    margin: 1%;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+
+.cityName {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.details {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.uv-high {
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.uv-moderate {
+    background-color: yellow;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.uv-favorable {
+    background-color: green;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.five-day {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+.top {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.img {
+    width: 80%;
+}
