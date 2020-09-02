@@ -83,10 +83,10 @@ var displayCurrentDate = function(data) {
 var addCity = function(cityName) {
     //if they enter a name, let's add a div, and remember it
     var name = document.createElement("p");
-    name.setAttribute("class", "cityList");
+    name.setAttribute("class", "cityList cityCard");
     name.textContent = cityName;
    cityList.appendChild(name);
-    cities = [];
+   // cities = [];
    cities.push(cityName);
    console.log(cities);
    myStorage.setItem("cities", JSON.stringify(cities));
