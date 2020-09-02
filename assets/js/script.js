@@ -86,6 +86,7 @@ var addCity = function(cityName) {
     name.setAttribute("class", "cityList cityCard");
     name.textContent = cityName;
    cityList.appendChild(name);
+   console.log(cities);
    // cities = [];
    cities.push(cityName);
    console.log(cities);
@@ -98,6 +99,8 @@ var loadCities = function() {
    console.log(cities);
     if(!cities){
         //if we have no cities in storage, don't worry about it
+        //create a blank variable for future storage
+        cities = [];
         return false;
     }
     //else, load the cities
