@@ -86,7 +86,7 @@ var addCity = function(cityName) {
     name.setAttribute("class", "cityList");
     name.textContent = cityName;
    cityList.appendChild(name);
-  // var cities = [];
+    cities = [];
    cities.push(cityName);
    console.log(cities);
    myStorage.setItem("cities", JSON.stringify(cities));
