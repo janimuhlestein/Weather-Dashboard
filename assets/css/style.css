@@ -35,11 +35,18 @@ body {
 .cityList {
     margin-top: 10px;
     font-size: 16px;
+    text-align: center;
+}
+
+.cityCard {
+    border: .5px solid darkslategrey;
+    padding: 5px;
 }
 
 .btnDiv {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 #btnClear {
@@ -71,8 +78,9 @@ body {
 
 .cityName {
     font-size: 30px;
-    margin: 10px;
-}
+    width: 100%;
+    text-align: center;
+};
 
 .details {
     font-size: 15px;
