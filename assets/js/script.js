@@ -118,7 +118,7 @@ $("#btnClear").on("click", function(){
 var getUVIndev = function(cityData) {
     var lat = cityData.coord.lat;
     var lon = cityData.coord.lon;
-    var apiURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + key + "&lat=" + lat + "&lon=" + lon;
+    var apiURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + key + "&lat=" + lat + "&lon=" + lon;
     fetch(apiURL).then(function(response){
         //if response was successful
         if(response.ok) {
