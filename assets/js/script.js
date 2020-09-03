@@ -439,10 +439,10 @@ loadCities();
 
 //if they click on one of the city names, load those
    // cityCard.addEventListener("click", function() {
-    $(".cityCard").on("click", function(){
+    $(".cityCard").on("click", function(event){
     //clear out previous results
     clearInfo();
-    var cityName = $(this).text().trim();
+    var cityName = $(event.target).text().trim();
     console.log(cityName);
     //get current conditions
     getCurrent(cityName);
