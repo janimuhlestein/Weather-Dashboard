@@ -13,6 +13,7 @@ var cloudyMoonIcon = "assets/images/iconfinder_moon-cloud_3233853.png";
 var snowIcon = "assets/images/iconfinder_snow_3233849.png";
 var cities = [];
 var myStorage = window.localStorage;
+var cityCard = document.querySelector("#cityCard");
 
 //On click, get the current temp info for the city
 var getCurrent = function(cityName) {
@@ -107,8 +108,8 @@ var loadCities = function() {
     for(var i = 0; i < cities.length; i++) {
 
         var cityName = document.createElement("p");
-        cityName.setAttribute("class", "cityList");
-        cityName.setAttribute("id", "cityCard");
+        cityName.setAttribute("class", "cityList cityCard");
+       // cityName.setAttribute("id", "cityCard");
         cityName.textContent = cities[i];
         cityList.appendChild(cityName);
     }
@@ -367,16 +368,18 @@ var setCurrentIcon = function(data) {
     time = parseInt(time);
     console.log(time);
     var description = data.weather[0].description;
+    console.log("The main description is: ", description);
    if(time < 18 && description === "clear sky") {
        iconPath = sunIcon;
    }
-   else if (time > 18 && description === "clear sky") {
+   else if (time >= 18 && description === "clear sky") {
        iconPath = clearMoonIcon;
+       console.log(iconPath);
    }
    else if(time < 18 && description === "few clouds" || time < 18 && description === "scattered clouds") {
        iconPath = partCloudIcon;
    }
-   else if(time > 18 && description === "few clouds" || time > 18 && description ==="scattered clouds" ) {
+   else if(time >= 18 && description === "few clouds" || time > 18 && description ==="scattered clouds" ) {
        iconPath = cloudyMoonIcon;
    }
    else if(description === "broken clouds" || description === "overcast clouds") {
@@ -435,7 +438,8 @@ var clearInfo = function() {
 loadCities();
 
 //if they click on one of the city names, load those
-$("#cityCard").on("click", function(){
+   // cityCard.addEventListener("click", function() {
+    $(".cityCard").on("click", function(){
     //clear out previous results
     clearInfo();
     var cityName = $(this).text().trim();
@@ -444,6 +448,5 @@ $("#cityCard").on("click", function(){
     getCurrent(cityName);
     //get the five day forecast data
     getFiveDay(cityName);
-;
 
 });
