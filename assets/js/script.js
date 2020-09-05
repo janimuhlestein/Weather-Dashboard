@@ -47,7 +47,7 @@ input.addEventListener("keyup", function(event){
 var getLatLong = function(cityName) {
     //first, get the latitude and longitude of the desired city from mapQuest
     //once we have them, get the weather information
-    var mQapiUrl = "http://www.mapquestapi.com/geocoding/v1/address?key=" +mapQuestKey + "&location=" + cityName;
+    var mQapiUrl = "https://www.mapquestapi.com/geocoding/v1/address?key=" +mapQuestKey + "&location=" + cityName;
     fetch(mQapiUrl).then(function(response){
         //if response was successful
         if(response.ok) {
