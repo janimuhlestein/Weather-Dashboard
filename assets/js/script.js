@@ -58,8 +58,9 @@ var getLatLong = function(cityName) {
                 long = data.results[0].locations[0].displayLatLng.lng;
                 latLong.push(lat);
                 latLong.push(long);
-                console.log(latLong);
                 getWeather(latLong, cityName);
+                //clear out latLong;
+                latLong = [];
             });
         }
         else {
@@ -227,10 +228,10 @@ var setIconPath = function(description) {
     else if( time > 18 && description === "overcast clouds" || description === "broken clouds" || description === "haze") {
         iconPath = nightCloudyIcon;
     }
-    else if(time <= 18 && description === "rainy"){
+    else if(time <= 18 && description === "rainy" || description === "heavy intensity rain"){
     iconPath = rainIcon;
     }
-    else if(time > 18 && description === "rainy") {
+    else if(time > 18 && description === "rainy" || description === "heavy intensity rain") {
         iconPath = nightRainIcon;
     }
     else if(time <= 18 && description === "few clouds" || description === "scattered clouds") {
@@ -288,8 +289,7 @@ $("#btnClear").on("click", function(){
 loadCities();
 
 //if they click on a city name, display it's info
-$(".cityCard").on("click", function() 
-{
+$(".cityCard").on("click", function() {
 //clear out previous results
 clearInfo();
 var cityName = $(this).text().trim();
