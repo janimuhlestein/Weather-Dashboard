@@ -290,6 +290,7 @@ loadCities();
 
 //if they click on a city name, display it's info
 $(".cityCard").on("click", function() {
+    debugger;
 //clear out previous results
 clearInfo();
 var cityName = $(this).text().trim();
