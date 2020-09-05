@@ -10,4 +10,6 @@ A small weather dashboard to display the weather forecast for your favorite citi
 7. Icons for appropriate weather conditions are displayed, and depend on time of day.
 8. The UV-index is noted by red, yellow, or green background, based on the value.
 
+![weather-dashboard](https://user-images.githubusercontent.com/52082187/92308871-1a929600-ef5e-11ea-98f7-e0733e236c9a.jpg)
+
 
