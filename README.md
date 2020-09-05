@@ -9,6 +9,7 @@ A small weather dashboard to display the weather forecast for your favorite citi
 6. If the user clicks on reset, all information is destroyed.
 7. Icons for appropriate weather conditions are displayed, and depend on time of day.
 8. The UV-index is noted by red, yellow, or green background, based on the value.
+9. URL = https://janimuhlestein.github.io/Weather-Dashboard/
 
 ![weather-dashboard](https://user-images.githubusercontent.com/52082187/92308871-1a929600-ef5e-11ea-98f7-e0733e236c9a.jpg)
 
