@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
@@ -19,7 +20,7 @@
             <div class = "col-6 col-md-4 col-group">
                 <div class = "form-group">
                     <label for= "city-input">Enter City Name</label>
-                    <input class = "form-control" id="cityName">
+                    <input type = "text" class = "form-control" id="cityName">
                 </div>
                 <div class = "btnDiv">
                 <button type="submit" id="btnSubmit" class = "btn btn-primary">Submit</button>
@@ -30,21 +31,15 @@
             <div class = "col-8 col-med-8 col-group">
                 <div id = "city-info" class = "city-info"></div>
                 <div class = "forecast">
-                    <div id = "first-day" class = "day"></div>
-                    <div id = "second-day" class = "day"></div>
-                    <div id = "third-day" class = "day"></div>
-                    <div id = "fourth-day" class = "day"></div>
-                    <div id = "fifth-day" class = "day"></div>
+                    <div id = "d0" class = "day"></div>
+                    <div id = "d1" class = "day"></div>
+                    <div id = "d2" class = "day"></div>
+                    <div id = "d3" class = "day"></div>
+                    <div id = "d4" class = "day"></div>
                 </div>
             </div>
     </div>
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
