@@ -280,6 +280,9 @@ $("#btnClear").on("click", function(){
     //clear all info, and then, cear out the local storage
     clearInfo();
     myStorage.removeItem("cities");
+    //after we've cleared storage, clear out the city list
+    list = document.querySelector("#list");
+    list.innerHTML = "";
 });
 
 loadCities();
