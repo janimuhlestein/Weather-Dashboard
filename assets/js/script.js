@@ -20,6 +20,8 @@ var nightThunderIcon = "assets/images/iconfinder_weather_25_2682826.png";
 var ltRainIcon = 'assets/images/iconfinder_weather_14_2682837.png';
 var ltRainNightIcon = "assets/images/iconfinder_weather_25_2682826.png";
 var hazeIcon = "assets/images/iconfinder_weather_30_2682821.png";
+var ltSnowIcon = "assets/images/p-c-snow.png";
+var ntSnowIcon = "assets/imagges/m-c-night-snow.png"
 var cities = [];
 var myStorage = window.localStorage;
 var cityCard = document.querySelector("#cityCard");
@@ -257,6 +259,12 @@ var setIconPath = function(description) {
     }
     else if(time >= 18 && description === "light rain" || description === "moderate rain") {
         iconPath = ltRainNightIcon;
+    }
+    else if(time >18 && description === "light snow") {
+        iconPath = ltSnowIcon;
+    }
+    else if(time <18 && description === "light snow") {
+        iconPath = ntSnowIcon;
     }
     return iconPath;
 };
